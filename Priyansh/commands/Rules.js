@@ -1,10 +1,10 @@
 const fs = global.nodemodule["fs-extra"];
 module.exports.config = {
-  name: "goibot",
-  version: "1.0.2",
+  name: "rules",
+  version: "1.0.0",
   hasPermssion: 0,
   credits: "Modified by ZAIN IFTIKHAR",
-  description: "Reply on 'bot'",
+  description: "Shows group rules when someone types 'rules'",
   commandCategory: "NoPrefix",
   usages: "NoPrefix",
   cooldowns: 5,
@@ -12,11 +12,13 @@ module.exports.config = {
 
 module.exports.handleEvent = async function ({ api, event, args, Threads, Users }) {
   const moment = require("moment-timezone");
-  const time = moment.tz("Asia/Kolkata").format("DD/MM/YYYY || HH:mm:ss");
   const { threadID, messageID, body, senderID } = event;
   const name = await Users.getNameUser(senderID);
+  const lowerBody = body.toLowerCase();
 
-  const rules = 
+  // Only trigger on exact word "rules"
+  if (lowerBody === "rules") {
+    const rulesMessage = 
 `╔══❖•ೋ° °ೋ•❖══╗
 Official Group Rules
 ╚══❖•ೋ° °ೋ•❖══╝
@@ -47,14 +49,11 @@ Official Group Rules
 
 ╭─★••★─╮
 Follow or Get Removed
-╰─★••★─╯`;
+╰─★••★─╯
 
-  const lowerBody = body.toLowerCase();
+❤️ 𝕆𝕎ℕ𝔼ℝ : ꧁𝐑𝐃𝐗꧂`;
 
-  if (lowerBody.includes("bot")) {
-    return api.sendMessage({
-      body: `꧁🍒❤️‍🔥${name}❤️‍🔥🍒꧂\n\n『꧁🍒\n${rules}\n🍒꧂』\n\n❤️𝕆𝕎ℕ𝔼ℝ : ꧁𝐑𝐃𝐗꧂🌹`
-    }, threadID, messageID);
+    return api.sendMessage({ body: rulesMessage }, threadID, messageID);
   }
 };
 
