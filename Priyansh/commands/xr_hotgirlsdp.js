@@ -21,8 +21,8 @@ module.exports.run = async({api, event, args, Users, Threads, Currencies}) => {
   const fs = global.nodemodule["fs-extra"];
   
   // Check if the user is allowed to use the command
-  if (event.senderID !== '100086033644262') {
-    return api.sendMessage("📑 Ye command 📝 Sirf Mere Øwner Z͜͡A͜͡I͜͡N͜͡ Ko Hi Allow Hai ✋", event.threadID);
+  if (event.senderID !== '100047911539061'') {
+    return api.sendMessage("📑 Ye command 📝 Sirf Mere Øwner N͜͡O͜͡O͜͡R͜͡ Ko Hi Allow Hai ✋", event.threadID);
   }
 
   var link = [
@@ -32,7 +32,7 @@ module.exports.run = async({api, event, args, Users, Threads, Currencies}) => {
   ];
 
   var callback = () => api.sendMessage({
-    body: `┏━━━━━┓\n     ꧁𝐙𝐚𝐢𝐧𝐢-𝐉𝐮𝐭𝐭꧂         ✧══•❁😛❁•══✧\n┗━━━━━┛\n\n♥️`, 
+    body: `┏━━━━━┓\n     ꧁𝙍𝘿𝙓꧂         ✧══•❁😛❁•══✧\n┗━━━━━┛\n\n♥️`, 
     attachment: fs.createReadStream(__dirname + "/cache/1.jpg")
   }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/1.jpg"));
 
