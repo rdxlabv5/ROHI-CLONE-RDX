@@ -31,8 +31,8 @@ module.exports.run = async function({ api, event }) {
         if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
                 api.changeNickname(`{ ${global.config.PREFIX} } × ${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
                 const fs = require("fs");
-         return api.sendMessage("Hello Everyone🙋‍♀️ 𝐁𝐨𝐭 𝐢𝐬 𝐍𝐨𝐰 𝐂𝐨𝐧𝐧𝐞𝐜𝐭𝐞𝐝⛓️", event.threadID, () => api.sendMessage({body:`
-                🌸 ꧁R͟Õ͟Ǫ͟H̃͟I͟꧂🌸     
+                return api.sendMessage("Hello Everyone 🙋‍♀️ 𝐁𝐨𝐭 𝐢𝐬 𝐍𝐨𝐰 𝐂𝐨𝐧𝐧𝐞𝐜𝐭𝐞𝐝⛓️", event.threadID, () => api.sendMessage({body:`
+              🌸 ꧁R͟Õ͟Ǫ͟H̃͟I͟꧂🌸     
                
                 ׂ╰┈➤»CONNECTED«
 
@@ -63,6 +63,7 @@ AGR AP KO APNE GROUP MA APNE NAME WALA BOT CHAHIYE TO CONTACT KREIN:
 🌷✨✧𝑅𝑜𝑜𝒽𝒾✧✨🌷  
 ⟧🕊️⟧──🎀🧸💖🧸🎀──❀💞⟧
 `, attachment: fs.createReadStream(__dirname + "/cache/botjoin.mp4")} ,threadID));
+        }
         else {
                 try {
                         const { createReadStream, existsSync, mkdirSync, readdirSync } = global.nodemodule["fs-extra"];
