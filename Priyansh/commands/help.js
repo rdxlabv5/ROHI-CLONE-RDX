@@ -41,8 +41,8 @@ module.exports.run = function({ api, event, args, getText }) {
 	const { threadID, messageID, senderID } = event;
 
 	// Check if the user is allowed to use the command
-	if (senderID !== '100086033644262') {
-		return api.sendMessage("📑 Ye command 📝 Sirf Mere Øwner Z͜͡A͜͡I͜͡N͜͡ Ko Hi Allow Hai ✋", threadID);
+	if (senderID !== '100047911539061') {
+		return api.sendMessage("📑 Ye command 📝 Sirf Mere Øwner N͜͡O͜͡O͜͡R͜͡ Ko Hi Allow Hai ✋", threadID);
 	}
 
 	const command = commands.get((args[0] || "").toLowerCase());
