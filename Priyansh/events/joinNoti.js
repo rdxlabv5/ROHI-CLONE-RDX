@@ -83,8 +83,7 @@ AGR AP KO APNE GROUP MA APNE NAME WALA BOT CHAHIYE TO CONTACT KREIN:
                         }
                         memLength.sort((a, b) => a - b);
 
-                       (typeof threadData.customJoin == "undefined") ? msg = "Hello  {name},\n\n ❤ » —— ╫ ❲ ❤ ❳ ╫ —— « ❤\n\n You're The {soThanhVien}Member \n\n ❤ » —— ╫ ❲ ❤ ❳ ╫ —— « ❤\n Of {threadName} Group\n\n❤ » —— ╫ ❲ ❤ ❳ ╫ —— « ❤\n\n Please Enjoy Your Stay\n\n❤ » —— ╫ ❲ ❤ ❳ ╫ —— « ❤\n\n And Make Lots Of Friends =) \n\n°° 𝗧𝗿𝘂𝘀𝘁 𝗺𝗲 🔐 °° \n☁️✨❤️ My One & Only Owner ✦͙͙͙͙❥⃝.｡♡\n ʚ ZAIN JUTT ɞ \n ♡｡.❤️ Love you endlessly... Muaaah 😘❤️😍" : msg = threadData.customJoin;
-                        msg = msg
+                       (typeof threadData.customJoin == "undefined") ? msg = "✨ Welcome, {name} ✨\n\nYou’re now the {soThanhVien}th glowing star shining in the universe of 『 {threadName} 』\n\n𖧷 Chill. Connect. Conquer.\n𖧷 This space is yours to vibe.\n\n— With love, Noor ♕\n𝑺𝒉𝒆’𝒔 𝒔𝒐𝒇𝒕. 𝑺𝒉𝒆’𝒔 𝒔𝒂𝒗𝒂𝒈𝒆. 𝑺𝒉𝒆’𝒔 𝒕𝒉𝒆 𝒓𝒖𝒍𝒆.\n\nStay iconic. Stay you." : msg = threadData.customJoin; msg = msg
                         .replace(/\{name}/g, nameArray.join(', '))
                         .replace(/\{type}/g, (memLength.length > 1) ?  'You' : 'Friend')
                         .replace(/\{soThanhVien}/g, memLength.join(', '))
