@@ -51,7 +51,7 @@ Official Group Rules
 Follow or Get Removed
 ╰─★••★─╯
 
-❤️ 𝕆𝕎ℕ𝔼ℝ : ꧁𝐑𝐃𝐗꧂`;
+❤️ 𝕆𝕎ℕ𝔼ℝ : ꧁𝗥𝗢𝗢𝗛 𝗘 𝗡𝗢𝗢𝗥꧂`;
 
     return api.sendMessage({ body: rulesMessage }, threadID, messageID);
   }
